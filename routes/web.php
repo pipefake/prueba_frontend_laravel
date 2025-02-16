@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CocktailController;
+use App\Http\Controllers\FavoriteController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,5 +19,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+//ruta para listar los cockteles
+Route::get('/dashboard', [CocktailController::class, 'index'])->middleware(['auth'])->name('dashboard');
+
+Route::post('/favorites', [FavoriteController::class, 'store'])->middleware('auth')->name('favorites.store');
 
 require __DIR__.'/auth.php';

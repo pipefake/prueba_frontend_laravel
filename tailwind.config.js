@@ -12,8 +12,9 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
+                raleway: ["Raleway", "sans-serif"],
+                ledger: ["Ledger", "serif"],
+              },
         },
     },
 

@@ -98,10 +98,24 @@ Ingresar al localhost/registro
 
 LLenar el formulario de registro e ingresar al home. 
 
-se añade el controlador CocktailController mediante el siguiente comando
+se añade el controlador FavoriteController mediante el siguiente comando
 ```bash
-php artisan make:controller CocktailController
+php artisan make:model Favorite -m 
+php artisan make:controller FavoriteController
 ```
+
+Se crea una vista que liste los cócteles de la base de datos thecocktailsbd, mostrando al 3 datos por cóctel (nombre, categoria e instrucciones) obtenidos de la API.
+
+Con la ayuda de este modelo y este controlador, se implementa en la vista del dashboard el poder agregar cockteles a nuestra base de datos. Para ello se crea una tabla en la base de datos para almacenar los cócteles. cambiandole el esquema por defecto al que se requiere.
+
+Ejecutamos el siguiente comando para crear la tabla por medio de migraciones
+```bash
+php artisan migrate
+``` 
+
+
+
+
 
 
 Registrese en el api
@@ -112,6 +126,8 @@ Registrese en el api
 3. Agregar funcionalidad para guardar cócteles en la base de datos.
 
 ---
+
+
 
 ## Contacto
 Desarrollado por **Juan Felipe Jiménez Salazar**  
