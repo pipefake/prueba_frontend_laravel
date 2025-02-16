@@ -77,6 +77,35 @@ Hasta ahora, se ha:
 - Configurado la API de TheCocktailDB.
 - Generado la estructura básica del proyecto.
 
+-Instalamos Breeze
+```bash
+composer require laravel/breeze --dev
+php artisan breeze:install
+```
+
+-Crear una base de datos MYSQL llamada laravel_cocktail 
+No es necesario crear tablas, Laravel lo hará con las migraciones.
+
+-Instalar las migraciones de Laravel.
+Ejecuta estos comandos en la terminal del proyecto para migrar las tablas de autenticación:
+```bash
+php artisan migrate
+```
+
+Servir el proyecto.
+
+Ingresar al localhost/registro
+
+LLenar el formulario de registro e ingresar al home. 
+
+se añade el controlador CocktailController mediante el siguiente comando
+```bash
+php artisan make:controller CocktailController
+```
+
+
+Registrese en el api
+
 ## Siguientes Pasos
 1. Implementar la vista principal para listar cócteles.
 2. Consumir la API y mostrar datos en la interfaz.
