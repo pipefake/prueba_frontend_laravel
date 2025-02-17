@@ -46,7 +46,11 @@
                     <header class="grid grid-cols-2 items-center pa-20 gap-2 py-0 lg:grid-cols-3 lg:max-h-7xl">
                   
                         @if (Route::has('login'))
-                        <div class="rounded-50 py-10 px-5 bg-gray-300 h-[70vh] w-full flex flex-col justify-center items-center">
+                        <div style="
+    border-radius: 210px;
+    padding: 41px;
+    text-align: center;
+" class="logindashboard rounded-50 py-10 px-5 bg-gray-300 h-[70vh] w-full flex flex-col justify-center items-center">
                             <h2 class=" text-2xl text-titulo font-ledger text-black font-serif py-2">Bienvenidos</h2>
                             <p class="py-1 text-black justify-text">¡Bienvenidos a esta prueba técnica! 
                                 Realizada por Juan Felipe Jiménez Salazar,
@@ -56,25 +60,38 @@
                             <nav class="w-full flex flex-col gap-2 mt-5">
                                 @auth
                                     <a
+                                    style="
+    background-color: #187a5e;
+    color: white;
+    font-size: 20px;
+"
                                         href="{{ url('/dashboard') }}"
                                         class="w-full bg-teal-200 text-black font-serif rounded-md px-4 py-3 text-center transition hover:bg-green-700"
                                     >
                                         Dashboard
                                     </a>
                                 @else
-                                    <a
+                                    <a style="
+    background-color: #fffaed;
+    font-size: 20px;
+    color: #173c30;
+"
                                         href="{{ route('login') }}"
                                         class="w-full bg-teal-200 text-black font-serif rounded-md px-4 py-3 text-center transition hover:bg-green-700"
                                     >
-                                        Log in
+                                        Ingresar
                                     </a>
 
                                     @if (Route::has('register'))
-                                        <a
+                                        <a style="
+    background-color: #187a5e;
+    color: white;
+    font-size: 20px;
+"
                                             href="{{ route('register') }}"
                                             class="w-full bg-green-600 text-black font-serif rounded-md px-4 py-3 text-center transition hover:bg-green-700"
                                         >
-                                            Register
+                                            Registrar
                                         </a>
                                     @endif
                                 @endauth
