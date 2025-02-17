@@ -3,6 +3,10 @@
 ## Descripción del Proyecto
 Este proyecto es una prueba técnica desarrollada en Laravel para consumir la API pública de TheCocktailDB. La aplicación permitirá listar, almacenar, editar y eliminar cócteles, cumpliendo con los requisitos establecidos.
 
+Enlace al diseño del aplicativo:
+https://www.figma.com/design/qpZekXjhLdNFWeOU73rUXu/Prueba_Ingeniero_Frontend?node-id=0-1&t=uz2AEEWm8Ns4tT72-1
+
+
 ## Tecnologías Utilizadas
 - **Framework:** Laravel
 - **Frontend:** Blade Templates, jQuery, Bootstrap
