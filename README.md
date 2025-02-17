@@ -106,26 +106,20 @@ php artisan make:controller FavoriteController
 
 Se crea una vista que liste los cócteles de la base de datos thecocktailsbd, mostrando al 3 datos por cóctel (nombre, categoria e instrucciones) obtenidos de la API.
 
-Con la ayuda de este modelo y este controlador, se implementa en la vista del dashboard el poder agregar cockteles a nuestra base de datos. Para ello se crea una tabla en la base de datos para almacenar los cócteles. cambiandole el esquema por defecto al que se requiere.
+Con la ayuda de este modelo y este controlador, se implementa en la vista del dashboard el poder agregar cockteles a nuestra base de datos. Para ello se crea una tabla en la base de datos para almacenar los cócteles. cambiándole el esquema por defecto al que se requiere.
 
 Ejecutamos el siguiente comando para crear la tabla por medio de migraciones
 ```bash
 php artisan migrate
 ``` 
 
+##Se implementa la vista para listar y eliminar cockteles
 
 
 
 
 
 Registrese en el api
-
-## Siguientes Pasos
-1. Implementar la vista principal para listar cócteles.
-2. Consumir la API y mostrar datos en la interfaz.
-3. Agregar funcionalidad para guardar cócteles en la base de datos.
-
----
 
 
 

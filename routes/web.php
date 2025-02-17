@@ -24,5 +24,9 @@ Route::middleware('auth')->group(function () {
 Route::get('/dashboard', [CocktailController::class, 'index'])->middleware(['auth'])->name('dashboard');
 
 Route::post('/favorites', [FavoriteController::class, 'store'])->middleware('auth')->name('favorites.store');
+Route::get('/favorites', [FavoriteController::class, 'index'])->name('favorites.index');
+Route::resource('favorites', FavoriteController::class)->only(['store', 'destroy']); 
 
 require __DIR__.'/auth.php';
+
+
